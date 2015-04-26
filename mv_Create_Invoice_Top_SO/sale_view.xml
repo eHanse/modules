@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_sales_order_form_z1" model="ir.ui.view">
+            <field name="name">sale.order.form.z1</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="pricelist_id" position="before">
+                    <field name="order_policy"/>
+                </field>
+            </field>
+        </record>
+        
+         <record id="view_sales_order_form_z2" model="ir.ui.view">
+            <field name="name">sale.order.form.z2</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+               
+                <field name="payment_term" position="replace">
+                </field>
+               
+                
+            </field>
+        </record>
+        
+         <record id="view_sales_order_form_z3" model="ir.ui.view">
+            <field name="name">sale.order.form.z3</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+               
+                <field name="pricelist_id" position="before">
+                    <field name="currency_id"/>
+                </field>
+                
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
